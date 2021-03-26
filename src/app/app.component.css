@@ -1,4 +1,37 @@
-.table-header {
-    display: flex;
-    justify-content: space-between;
+.container {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+.container .main-body {
+  width: 100%;
+}
+
+.container aside {
+  width: 0;
+  overflow-y: auto;
+  transition: all 0.5s;
+  background-color: #3c4962;
+}
+
+.container aside.expanding {
+  width: 200px;
+}
+
+:host ::ng-deep .side-menu.p-menu {
+  background-color: transparent;
+  border: 0;
+}
+:host ::ng-deep .side-menu.p-menu .p-submenu-header {
+  background-color: transparent;
+  color: white;
+}
+:host ::ng-deep .side-menu.p-menu .p-menu-list {
+  background-color: transparent;
+}
+:host ::ng-deep .side-menu.p-menu .p-menuitem .p-menuitem-text {
+  color: white;
+}
+:host ::ng-deep .side-menu.p-menu .p-menuitem .p-menuitem-icon {
+  color: white;
 }
