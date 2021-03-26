@@ -25,6 +25,13 @@ export class AppComponent implements OnInit {
               this.router.navigate(["/tableEx"]);
             },
           },
+          {
+            label: "Button",
+            icon: "pi pi-table",
+            command: () => {
+              this.router.navigate(["/buttonEx"]);
+            },
+          },
         ],
       },
     ];

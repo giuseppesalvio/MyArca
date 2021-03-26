@@ -5,6 +5,7 @@
 
 .container .main-body {
   width: 100%;
+  padding: 2em;
 }
 
 .container aside {
@@ -15,7 +16,7 @@
 }
 
 .container aside.expanding {
-  width: 200px;
+  width: 226px;
 }
 
 :host ::ng-deep .side-menu.p-menu {
