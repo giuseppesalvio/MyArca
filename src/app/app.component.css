@@ -1,6 +1,6 @@
 .container {
+  padding-top: 56px;
   display: flex;
-  height: calc(100vh - 70px);
 }
 
 .container .main-body {
@@ -23,16 +23,77 @@
   background-color: transparent;
   border: 0;
 }
+
 :host ::ng-deep .side-menu.p-menu .p-submenu-header {
   background-color: transparent;
   color: white;
 }
+
 :host ::ng-deep .side-menu.p-menu .p-menu-list {
   background-color: transparent;
 }
+
 :host ::ng-deep .side-menu.p-menu .p-menuitem .p-menuitem-text {
   color: white;
 }
+
 :host ::ng-deep .side-menu.p-menu .p-menuitem .p-menuitem-icon {
   color: white;
+}
+
+.layout-topbar {
+  background-color: #fdfeff;
+  /*noinspection CssInvalidFunction*/
+  box-shadow: 0 24px 64px -2px rgb(0 0 0 / 2%), 0 6px 16px -2px rgb(0 0 0 / 6%),
+    0 2px 6px -2px rgb(0 0 0 / 8%);
+}
+
+.layout-topbar {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+  height: 56px;
+}
+
+.layout-topbar .layout-topbar-wrapper {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.layout-topbar .layout-topbar-wrapper .layout-topbar-left {
+  height: 100%;
+  width: 240px;
+  padding: 11px 14px 13px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.layout-topbar .layout-topbar-wrapper .layout-topbar-right {
+  height: 100%;
+  flex-grow: 1;
+  padding: 10px 32px 10px 12px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-right: solid 1px transparent;
+}
+
+.layout-topbar-logo {
+  height: 2.9rem;
+}
+.layout-topbar-logo img {
+  height: 100%;
 }
