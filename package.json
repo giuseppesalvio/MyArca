@@ -8,7 +8,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "json-server-db": "json-server --watch json-fake-server/db.json",
+    "json-server-pg": "json-server --watch json-fake-server/play-ground.json",
+    "json-server-js": "json-server --watch json-fake-server/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
     "@angular/platform-browser": "~11.0.0",
     "@angular/platform-browser-dynamic": "~11.0.0",
     "@angular/router": "~11.0.0",
+    "faker": "^5.5.1",
     "primeflex": "2.0.0",
     "primeicons": "4.1.0",
     "primeng": "^11.3.0",
