@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Product } from "./domain/product";
 import { ConfirmationService, MessageService } from "primeng/api";
-import { ProductService } from "../../services/productservice";
+import { ProductService } from "../../services/product.service";
 
 @Component({
   selector: "app-table-ex",

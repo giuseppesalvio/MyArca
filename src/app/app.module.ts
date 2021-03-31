@@ -20,11 +20,17 @@ import { DropdownModule } from "primeng/dropdown";
 import { MenuModule } from "primeng/menu";
 import { AppRoutingModule } from "./app-routing.module";
 import { TableExComponent } from "./pagine-esempio/table-ex/table-ex.component";
-import { ProductService } from "./services/productservice";
+import { ProductService } from "./services/product.service";
 import { ButtonExComponent } from "./pagine-esempio/button-ex/button-ex.component";
+import { HttpCallExComponent } from "./pagine-esempio/http-call-ex/http-call-ex.component";
 
 @NgModule({
-  declarations: [AppComponent, TableExComponent, ButtonExComponent],
+  declarations: [
+    AppComponent,
+    TableExComponent,
+    ButtonExComponent,
+    HttpCallExComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

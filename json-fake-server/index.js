@@ -14,10 +14,10 @@ var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
 var randomCard = faker.helpers.createCard(); // random contact card containing many properties
 
 module.exports = () => {
-  const data = { usersRandom: [] };
+  const data = { people: [] };
   // Create 1000 users
   for (let i = 0; i < 1000; i++) {
-    data.usersRandom.push({ id: i, name: faker.name.findName() });
+    data.people.push({ id: i, name: faker.name.findName() });
   }
   return data;
 };
