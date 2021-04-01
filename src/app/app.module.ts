@@ -23,6 +23,9 @@ import { TableExComponent } from "./pagine-esempio/table-ex/table-ex.component";
 import { ProductService } from "./services/product.service";
 import { ButtonExComponent } from "./pagine-esempio/button-ex/button-ex.component";
 import { HttpCallExComponent } from "./pagine-esempio/http-call-ex/http-call-ex.component";
+import { CardModule } from "primeng/card";
+import { ScrollPanelModule } from "primeng/scrollpanel";
+import { PanelModule } from "primeng/panel";
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { HttpCallExComponent } from "./pagine-esempio/http-call-ex/http-call-ex.
     DropdownModule,
     MenuModule,
     AppRoutingModule,
+    CardModule,
+    ScrollPanelModule,
+    PanelModule,
   ],
   providers: [ConfirmationService, ProductService, MessageService],
   bootstrap: [AppComponent],

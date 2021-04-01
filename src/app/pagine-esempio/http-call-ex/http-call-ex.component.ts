@@ -1,10 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { PeopleService } from "../../services/people.service";
-
-class People {
-  id: number;
-  name: string;
-}
+import { People } from "../../domain/people";
 
 @Component({
   selector: "app-http-call-ex",
@@ -14,6 +10,12 @@ class People {
 })
 export class HttpCallExComponent implements OnInit {
   peoples: People[];
+  peoplesSearchById: People;
+  peoplePost: People = {
+    id: null,
+    name: "",
+  };
+  value1: number;
   constructor(private peopleService: PeopleService) {}
 
   ngOnInit() {
@@ -25,6 +27,36 @@ export class HttpCallExComponent implements OnInit {
       (val) => {
         console.log("PUT call successful value returned in body", val);
         this.peoples = val;
+      },
+      (response) => {
+        console.log("PUT call in error", response);
+      },
+      () => {
+        console.log("The PUT observable is now completed.");
+      }
+    );
+  }
+
+  searchPeople(id: number): void {
+    this.peopleService.getPeopleById(id).subscribe(
+      (val) => {
+        console.log("PUT call successful value returned in body", val);
+        this.peoplesSearchById = val;
+      },
+      (response) => {
+        console.log("PUT call in error", response);
+      },
+      () => {
+        console.log("The PUT observable is now completed.");
+      }
+    );
+  }
+
+  postPeople(peoplePost: People): void {
+    this.peopleService.postPeople(peoplePost).subscribe(
+      (val) => {
+        console.log("PUT call successful value returned in body", val);
+        this.peoplesSearchById = val;
       },
       (response) => {
         console.log("PUT call in error", response);
