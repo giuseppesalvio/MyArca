@@ -26,6 +26,11 @@ import { HttpCallExComponent } from "./pagine-esempio/http-call-ex/http-call-ex.
 import { CardModule } from "primeng/card";
 import { ScrollPanelModule } from "primeng/scrollpanel";
 import { PanelModule } from "primeng/panel";
+import { StoreModule } from "@ngrx/store";
+import { reducers, metaReducers } from "./reducers";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { environment } from "../environments/environment";
+import { CustomerModule } from "./customer/customer.module";
 
 @NgModule({
   declarations: [
@@ -55,6 +60,9 @@ import { PanelModule } from "primeng/panel";
     CardModule,
     ScrollPanelModule,
     PanelModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    CustomerModule,
   ],
   providers: [ConfirmationService, ProductService, MessageService],
   bootstrap: [AppComponent],

@@ -1,5 +1,5 @@
 <div class="p-grid">
-  <div class="p-col-12 p-md-4">
+  <div class="p-col-3">
     <p-card header="Get All People Card" [style]="{ 'margin-bottom': '2em' }">
       <p-scrollPanel [style]="{ width: '100%', height: '25rem' }">
         <div class="scrollbar">
@@ -15,7 +15,7 @@
     </p-card>
   </div>
 
-  <div class="p-col-12 p-md-4">
+  <div class="p-col-3">
     <p-card header="Search" [style]="{ 'margin-bottom': '2em' }">
       <p-scrollPanel [style]="{ width: '100%', height: '25rem' }">
         <input type="text" pInputText [(ngModel)]="value1" />
@@ -31,12 +31,34 @@
     </p-card>
   </div>
 
-  <div class="p-col-12 p-md-4">
+  <div class="p-col-3">
     <p-card header="Post" [style]="{ 'margin-bottom': '2em' }">
       <p-scrollPanel [style]="{ width: '100%', height: '25rem' }">
         <input type="text" pInputText [(ngModel)]="name" />
         <p-button label="Submit" (onClick)="postPeople(name)"></p-button>
       </p-scrollPanel>
+    </p-card>
+  </div>
+
+  <div class="p-col-3">
+    <p-card header="Put" [style]="{ 'margin-bottom': '2em' }">
+      <p-scrollPanel [style]="{ width: '100%', height: '25rem' }">
+        fate un put ?????
+      </p-scrollPanel>
+    </p-card>
+  </div>
+  <!-- ----------------------------- -->
+
+  <div class="p-col-3">
+    <p-card header="Get All People Card" [style]="{ 'margin-bottom': '2em' }">
+      <p-scrollPanel [style]="{ width: '100%', height: '25rem' }">
+        <div class="scrollbar">
+          <app-customer-view></app-customer-view>
+
+          <app-customer-add></app-customer-add>
+        </div>
+      </p-scrollPanel>
+      <!-- <ng-template pTemplate="footer"> Footer content here </ng-template> -->
     </p-card>
   </div>
 </div>

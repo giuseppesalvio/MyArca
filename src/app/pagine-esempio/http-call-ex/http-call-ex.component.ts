@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { PeopleService } from "../../services/people.service";
-import { People } from "../../domain/people";
+import { People } from "../../models/people";
 
 @Component({
   selector: "app-http-call-ex",
