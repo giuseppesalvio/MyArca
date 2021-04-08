@@ -31,6 +31,11 @@ import { reducers, metaReducers } from "./reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { environment } from "../environments/environment";
 import { CustomerModule } from "./customer/customer.module";
+import { StoreExSempliceComponent } from "./pagine-esempio/store-ex-semplice/store-ex-semplice.component";
+import { PeopleService } from "./services/people.service";
+import { CounterModule } from "./ngrx-tutorial-1/counter.module";
+import { BooksModule } from "./ngrx-tutorial-2/books.module";
+import { StoreExCompletoModule } from "./pagine-esempio/store-ex-completo/store-ex-completo.module";
 
 @NgModule({
   declarations: [
@@ -38,6 +43,7 @@ import { CustomerModule } from "./customer/customer.module";
     TableExComponent,
     ButtonExComponent,
     HttpCallExComponent,
+    StoreExSempliceComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,8 +69,16 @@ import { CustomerModule } from "./customer/customer.module";
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     CustomerModule,
+    CounterModule,
+    BooksModule,
+    StoreExCompletoModule,
   ],
-  providers: [ConfirmationService, ProductService, MessageService],
+  providers: [
+    ConfirmationService,
+    ProductService,
+    MessageService,
+    PeopleService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

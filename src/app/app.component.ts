@@ -33,10 +33,38 @@ export class AppComponent implements OnInit {
             },
           },
           {
-            label: "people",
+            label: "Chiamate Service",
             icon: "pi pi-table",
             command: () => {
               this.router.navigate(["/peopleEx"]);
+            },
+          },
+          {
+            label: "Chiamate Store Semplice",
+            icon: "pi pi-table",
+            command: () => {
+              this.router.navigate(["/storeExSemplice"]);
+            },
+          },
+          {
+            label: "Chiamate Store Completo",
+            icon: "pi pi-table",
+            command: () => {
+              this.router.navigate(["/storeExCompleto"]);
+            },
+          },
+          {
+            label: "NgRx tutorial - counter",
+            icon: "pi pi-table",
+            command: () => {
+              this.router.navigate(["/ngrxCounter"]);
+            },
+          },
+          {
+            label: "NgRx tutorial - books",
+            icon: "pi pi-table",
+            command: () => {
+              this.router.navigate(["/ngrxBooks"]);
             },
           },
         ],

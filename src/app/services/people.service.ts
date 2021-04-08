@@ -13,6 +13,7 @@ export class PeopleService {
   constructor(private http: HttpClient) {}
 
   getPeople(): Observable<People[]> {
+    debugger;
     return this.http.get<People[]>(this.peopleUrl);
   }
 
