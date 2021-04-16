@@ -35,7 +35,7 @@ export const peopleReducer = createReducer(
     };
   })
 );
-
-export function reducer(state: PeopleState | undefined, action: Action): any {
-  return peopleReducer(state, action);
-}
+//
+// export function reducer(state: PeopleState | undefined, action: Action): any {
+//   return peopleReducer(state, action);
+// }
