@@ -23,6 +23,7 @@ export const initialState: PeopleState = {
 export const peopleReducer = createReducer(
   initialState,
   on(loadPeoples, (state: PeopleState) => {
+    debugger
     return {
       ...state,
       peoples: [...state.peoples],
