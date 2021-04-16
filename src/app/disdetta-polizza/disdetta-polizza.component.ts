@@ -151,19 +151,19 @@ export class DisdettaPolizzaComponent implements OnInit {
         this.mailDate = this.getMailDate().name
         this.policy = this.getPolicy().name
         this.company = this.getCompany()
-
+        debugger
         this.customerMailCancellation = this.templateCustomerMailCancellation
             .replace('$customer', this.contractor)
             .replace('$requestDate', this.mailDate)
             .replace('$expirationDate', this.expDate)
-            .replace('$cancellationDate', this.mailDate + 5)
+            .replace('$cancellationDate', this.add5Days(this.mailDate).toString())
             .replace('$policy', this.policy)
             .replace('$company', this.company)
 
         this.operationMailCancellation = this.templateOperationMailCancellation
             .replace('$customer', this.contractor)
             .replace('$requestDate', this.mailDate)
-            .replace('$cancellationDate', this.mailDate + 5)
+            .replace('$cancellationDate', this.add5Days(this.mailDate).toString())
             .replace('$expirationDate', this.expDate)
             .replace('$policy', this.policy)
 
@@ -173,14 +173,14 @@ export class DisdettaPolizzaComponent implements OnInit {
             .replace('$customer', this.contractor)
             .replace('$requestDate', this.mailDate)
             .replace('$expirationDate', this.expDate)
-            .replace('$cancellationDate', this.mailDate + 5)
+            .replace('$cancellationDate', this.add5Days(this.mailDate).toString())
             .replace('$policy', this.policy)
             .replace('$company', this.company)
 
         this.operationMailMissing = this.templateOperationMailMissing
             .replace('$customer', this.contractor)
             .replace('$requestDate', this.mailDate)
-            .replace('$cancellationDate', this.mailDate + 5)
+            .replace('$cancellationDate', this.add5Days(this.mailDate).toString())
             .replace('$expirationDate', this.expDate)
             .replace('$policy', this.policy)
 
@@ -190,14 +190,14 @@ export class DisdettaPolizzaComponent implements OnInit {
             .replace('$customer', this.contractor)
             .replace('$requestDate', this.mailDate)
             .replace('$expirationDate', this.expDate)
-            .replace('$cancellationDate', this.mailDate + 5)
+            .replace('$cancellationDate', this.add5Days(this.mailDate).toString())
             .replace('$policy', this.policy)
             .replace('$company', this.company)
 
         this.operationMailWrongAgency = this.templateOperationMailWrongAgency
             .replace('$customer', this.contractor)
             .replace('$requestDate', this.mailDate)
-            .replace('$cancellationDate', this.mailDate + 5)
+            .replace('$cancellationDate', this.add5Days(this.mailDate).toString())
             .replace('$expirationDate', this.expDate)
             .replace('$policy', this.policy)
 
@@ -206,6 +206,9 @@ export class DisdettaPolizzaComponent implements OnInit {
             "Cancellation date : " + this.mailDate;
     }
 
+    public add5Days(theDate: string) {
+        return new Date(Date.parse(theDate) + 5*24*60*60*1000);
+    }
     public senderCustomerMail() {
         return _.find(this.cogitoAnnotation, function (temp) {
             return temp.type.includes('CANCELLATION@contractor')
