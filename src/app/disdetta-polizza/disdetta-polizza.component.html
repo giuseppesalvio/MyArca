@@ -1,0 +1,163 @@
+<p-toast></p-toast>
+
+<div class="p-grid">
+    <div class="p-col-2" style="text-align: center">
+        <button
+            type="button"
+            pButton
+            pRipple
+            label="File Upload"
+            class="p-button-raised p-button-secondary"
+            onclick="document.getElementById('getFile').click();"
+        ></button>
+        <input type="file" id="getFile" style="display: none" (change)="onChange($event.target.files)" />
+    </div>
+    <div class="p-col-10">
+        <p-card header="File Content" class="altezza">
+            <div>
+                <pre>{{ fileContent }}</pre>
+            </div>
+        </p-card>
+    </div>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-2" style="text-align: center">
+        <button
+            type="button"
+            pButton
+            pRipple
+            (click)="postFile()"
+            label="Process"
+            class="p-button-raised p-button-secondary"
+            [disabled]="!sendEnable"
+        ></button>
+        <!--        <br />-->
+        <!--        <br />-->
+        <!--        <button-->
+        <!--            type="button"-->
+        <!--            pButton-->
+        <!--            pRipple-->
+        <!--            (click)="get()"-->
+        <!--            label="test da eliminare"-->
+        <!--            class="p-button-raised p-button-secondary"-->
+        <!--        ></button>-->
+    </div>
+    <div class="p-col-10">
+        <p-card header="Output Discover" class="altezza25">
+            <div class="p-grid">
+                <div class="p-col-12" style="overflow-y: auto; height: 50vh">
+                    <p-accordion [multiple]="true">
+                        <p-accordionTab header="Entities">
+                            <div *ngFor="let campo of cogitoTemplate">
+                                {{ campo.name }}
+                            </div>
+                        </p-accordionTab>
+
+                        <p-accordionTab header="Entity Fields">
+                            <div *ngFor="let temp of cogitoField">
+                                {{ temp.name }}
+                            </div>
+                        </p-accordionTab>
+
+
+
+                        <p-accordionTab header="Descriptor">
+                            <div *ngFor="let campo of cogitoDescription">
+                                <span *ngIf="!campo.label"> {{ campo.type }} - {{ campo.name }} </span>
+                            </div>
+                            <hr />
+                            <div *ngFor="let campo of cogitoDescription">
+                                <span *ngIf="campo.label">
+                                    <div *ngFor="let a of campo.a">
+                                        <span *ngIf="a.refName"> {{ a.name }} - {{ a.refName }} </span>
+                                    </div>
+                                </span>
+                            </div>
+                        </p-accordionTab>
+
+<!--                        <p-accordionTab header="Annotation">-->
+<!--                            <div *ngFor="let campo of cogitoAnnotation">-->
+<!--                                <span *ngIf="!campo.label"> {{ campo.type }} - {{ campo.name }} </span>-->
+<!--                            </div>-->
+<!--                            <hr />-->
+<!--                            <div *ngFor="let campo of cogitoAnnotation">-->
+<!--                                <span *ngIf="campo.label">-->
+<!--                                    {{ campo.type }} - {{ campo.name }} - {{ campo.label }}-->
+<!--                                </span>-->
+<!--                            </div>-->
+<!--                        </p-accordionTab>-->
+
+                        <p-accordionTab header="Synthesis">
+                            <div *ngFor="let synthesis of cogitoSynthesis">
+                                <div *ngFor="let campo of synthesis.a">
+                                    <span>{{ campo.name }} - {{ campo.value }}</span>
+                                </div>
+                            </div>
+                        </p-accordionTab>
+
+                        <p-accordionTab header="Input for RPA">
+                             <pre [innerHTML]="inputRpa"></pre>
+                        </p-accordionTab>
+
+                        <p-accordionTab header="Customer Mail [Cancellation]">
+                            <pre [innerHTML]="customerMailCancellation"></pre>
+                        </p-accordionTab>
+                        <p-accordionTab header="Management Mail [Cancellation]">
+                             <pre [innerHTML]="operationMailCancellation"></pre>
+                        </p-accordionTab>
+
+                        <p-accordionTab header="Customer Mail [Missing mandatory fields]">
+                             <pre [innerHTML]="customerMailMissing"></pre>
+                        </p-accordionTab>
+                        <p-accordionTab header="Management Mail [Missing mandatory fields]">
+                             <pre [innerHTML]="operationMailMissing"></pre>
+                        </p-accordionTab>
+
+                        <p-accordionTab header="Customer Mail [Wrong Company]">
+                            <pre [innerHTML]="customerMailWrongAgency"></pre>
+                        </p-accordionTab>
+                        <p-accordionTab header="Management Mail [Wrong Company]">
+                             <pre [innerHTML]="operationMailWrongAgency"></pre>
+                        </p-accordionTab>
+
+
+
+                    </p-accordion>
+
+                </div>
+            </div>
+        </p-card>
+    </div>
+
+    <!--  <input type="file" (change)="onChange($event.target.files)" />-->
+
+    <!--  -->
+    <!--  <button-->
+    <!--    type="button"-->
+    <!--    pButton-->
+    <!--    pRipple-->
+    <!--    (click)="showInfo()"-->
+    <!--    label="Info"-->
+    <!--    class="p-button-info"-->
+    <!--  ></button>-->
+
+    <!--  <p-fileUpload-->
+    <!--    #fubauto-->
+    <!--    mode="basic"-->
+    <!--    name="demo[]"-->
+    <!--    accept="image/*"-->
+    <!--    url="/assets/data"-->
+    <!--    maxFileSize="1000000"-->
+    <!--    (onUpload)="onBasicUploadAuto($event)"-->
+    <!--    [auto]="true"-->
+    <!--    chooseLabel="File Upload"-->
+    <!--  ></p-fileUpload>-->
+
+    <!--  <pdf-viewer-->
+    <!--    [src]="pdfSrc"-->
+    <!--    [render-text]="true"-->
+    <!--    style="display: block; height: 400px; overflow-y: auto"-->
+    <!--  ></pdf-viewer>-->
+    <!--</div>-->
+</div>

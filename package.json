@@ -1,5 +1,5 @@
 {
-  "name": "primeng-quickstart-cli",
+  "name": "myarca2",
   "version": "1.0.0-SNAPSHOT",
   "license": "MIT",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/primefaces/primeng-quickstart-cli.git"
+    "url": "https://github.com/giuseppesalvio/MyArca.git"
   },
   "dependencies": {
     "@angular/animations": "~11.0.0",
@@ -30,11 +30,14 @@
     "@ngrx/entity": "^11.1.0",
     "@ngrx/store": "^11.1.0",
     "@ngrx/store-devtools": "^11.1.0",
+    "@types/underscore": "^1.11.1",
     "faker": "^5.5.1",
+    "ng2-pdf-viewer": "^6.4.1",
     "primeflex": "2.0.0",
     "primeicons": "4.1.0",
     "primeng": "^11.3.0",
     "rxjs": "~6.6.0",
+    "underscore": "^1.13.0",
     "web-animations-js": "^2.3.2",
     "zone.js": "~0.10.2"
   },

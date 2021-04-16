@@ -54,7 +54,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "primeng-quickstart-cli:build"
+            "browserTarget": "primeng-quickstart-cli:build",
+
           },
           "configurations": {
             "production": {

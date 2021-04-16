@@ -36,6 +36,11 @@ import { PeopleService } from "./services/people.service";
 import { CounterModule } from "./ngrx-tutorial-1/counter.module";
 import { BooksModule } from "./ngrx-tutorial-2/books.module";
 import { StoreExCompletoModule } from "./pagine-esempio/store-ex-completo/store-ex-completo.module";
+import { DisdettaPolizzaComponent } from "./disdetta-polizza/disdetta-polizza.component";
+import { PdfViewerModule } from "ng2-pdf-viewer";
+import { ToastModule } from "primeng/toast";
+import { FileUploadModule } from "primeng/fileupload";
+import { AccordionModule } from "primeng/accordion";
 
 @NgModule({
   declarations: [
@@ -44,8 +49,12 @@ import { StoreExCompletoModule } from "./pagine-esempio/store-ex-completo/store-
     ButtonExComponent,
     HttpCallExComponent,
     StoreExSempliceComponent,
+    DisdettaPolizzaComponent,
   ],
   imports: [
+    AccordionModule,
+    FileUploadModule,
+    ToastModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -72,6 +81,8 @@ import { StoreExCompletoModule } from "./pagine-esempio/store-ex-completo/store-
     CounterModule,
     BooksModule,
     StoreExCompletoModule,
+    BrowserModule,
+    PdfViewerModule,
   ],
   providers: [
     ConfirmationService,

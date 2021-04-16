@@ -1,18 +1,24 @@
 import { Action, createReducer, on } from "@ngrx/store";
 
 import { People } from "../../../models/people";
-import { loadPeoples, loadPeoplesSuccess } from "./people.actions";
+import {
+  loadPeoples,
+  loadPeoplesFailure,
+  loadPeoplesSuccess,
+} from "./people.actions";
 
 export const peopleFeatureKey = "people";
 
 export interface PeopleState {
   peoples: People[];
-  test: string;
+  operazione: boolean;
+  error: boolean;
 }
 
 export const initialState: PeopleState = {
   peoples: [],
-  test: "aaaaaa",
+  operazione: false,
+  error: false,
 };
 
 // export const reducer = createReducer(
@@ -22,16 +28,28 @@ export const initialState: PeopleState = {
 
 export const peopleReducer = createReducer(
   initialState,
-  on(loadPeoples, (state: PeopleState) => {
+  on(loadPeoples, (state) => {
     return {
       ...state,
       peoples: [...state.peoples],
+      operazione: null,
+      error: false,
     };
   }),
-  on(loadPeoplesSuccess, (state: PeopleState, x) => {
+  on(loadPeoplesSuccess, (state, action) => {
     return {
       ...state,
-      peoples: [...x.peoples],
+      peoples: [...action["peoples"]],
+      operazione: true,
+      error: false,
+    };
+  }),
+  on(loadPeoplesFailure, (state, action) => {
+    return {
+      ...state,
+      peoples: [...state.peoples],
+      operazione: null,
+      error: true,
     };
   })
 );

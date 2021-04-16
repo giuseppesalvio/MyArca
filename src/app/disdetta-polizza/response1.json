@@ -1,0 +1,1318 @@
+{
+  "doc": [
+    {
+      "content": [
+        {
+          "text": {
+            "value": "Mittente: Parri Marzia \r\nVIA MONTEGRAPPA 32 57023 Pecino (LI)\r\n\r\n \r\n \r\nSpett.le: ITAS MUTUA \r\nP.ZA DELLE DONNE LAVORATRici 2, 38123 TRENTO (TN) \r\n\r\n\r\nOggetto: Disdetta polizza assicurativa \r\nContraente: Parri Marzia\r\nNumero polizza: 2H/M12358626 \r\n\r\n17 DIC. 2019 JUCCINI: LOVA \r\n\r\n\r\nCon la presente si dà formale disdetta della polizza in oggetto, e/o eventuali sostituzioni, per la sua scadenza del 16/01/2020. \r\nQuanto sopra con riferimento sia alle condizioni di polizza che alle norme di legge vigenti. \r\nDistinti saluti. \r\n\r\nParri Marzia\r\n \r\nCecina, 9.12.19 \r\n\r\n\r\nPostaraccomandata \r\nPosteitaliane \r\n09.12.2019 15.49 Euro 005.40 \r\n100153783860132 \r\n38121 \r\n32040 57029 CEST (1) \r\n\r\n\r\n15378388603-2 \r\nRUM \r\nMitt:PARRI MARZIA \r\nVIA MONTEGRAPPA 32\r\n57023 COCINA (LI) \r\n\n",
+            "mimetype": "text/plain",
+            "charset": "UTF-8"
+          }
+        }
+      ],
+      "metadata": [
+        {
+          "a": [
+            {
+              "name": "language",
+              "value": "Italian"
+            }
+          ]
+        }
+      ],
+      "boundaries": [
+        {
+          "b": [
+            {
+              "s": 0,
+              "e": 61
+            },
+            {
+              "s": 71,
+              "e": 143
+            },
+            {
+              "s": 150,
+              "e": 245
+            },
+            {
+              "s": 250,
+              "e": 276
+            },
+            {
+              "s": 283,
+              "e": 411
+            },
+            {
+              "s": 414,
+              "e": 506
+            },
+            {
+              "s": 509,
+              "e": 525
+            },
+            {
+              "s": 530,
+              "e": 542
+            },
+            {
+              "s": 547,
+              "e": 562
+            },
+            {
+              "s": 569,
+              "e": 682
+            },
+            {
+              "s": 689,
+              "e": 768
+            }
+          ],
+          "name": "sentence",
+          "set": "_converter_"
+        }
+      ],
+      "knowledge": [
+        {
+          "type": [
+            {
+              "ad": [
+                {
+                  "name": "CATEGORY_ID",
+                  "scope": "KNOWLEDGE"
+                },
+                {
+                  "name": "COMPOUND",
+                  "type": "INTEGER",
+                  "scope": "DOCUMENT"
+                },
+                {
+                  "name": "SCORE",
+                  "type": "FLOAT",
+                  "scope": "DOCUMENT"
+                },
+                {
+                  "name": "path",
+                  "scope": "CONTEXTUAL"
+                },
+                {
+                  "name": "prefLabel",
+                  "scope": "CONTEXTUAL"
+                }
+              ],
+              "fullname": "/Category",
+              "name": "Category"
+            }
+          ],
+          "descriptor": [
+            {
+              "name": "00.01.00",
+              "label": "00.01.00",
+              "type": "/Category",
+              "a": [
+                {
+                  "name": "CATEGORY_ID",
+                  "value": "00.01.00"
+                },
+                {
+                  "name": "COMPOUND",
+                  "value": "80",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SCORE",
+                  "value": "80",
+                  "type": "FLOAT"
+                },
+                {
+                  "name": "path",
+                  "value": "00.01.00"
+                },
+                {
+                  "name": "prefLabel",
+                  "value": "00.01.00"
+                }
+              ]
+            }
+          ],
+          "annotation": [
+            {
+              "a": [
+                {
+                  "name": "SCORE",
+                  "value": "40",
+                  "type": "FLOAT"
+                }
+              ],
+              "name": "00.01.00",
+              "type": "/Category",
+              "s": 150,
+              "e": 188
+            },
+            {
+              "a": [
+                {
+                  "name": "SCORE",
+                  "value": "40",
+                  "type": "FLOAT"
+                }
+              ],
+              "name": "00.01.00",
+              "type": "/Category",
+              "s": 283,
+              "e": 411
+            }
+          ],
+          "name": "CATEGORIZATION"
+        },
+        {
+          "type": [
+            {
+              "type": [
+                {
+                  "ad": [
+                    {
+                      "name": "COUNT",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "ESYNCON",
+                      "scope": "CONTEXTUAL"
+                    },
+                    {
+                      "name": "SENTENCE_BEGIN",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "SENTENCE_END",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "TEXT",
+                      "type": "STRING",
+                      "scope": "DOCUMENT"
+                    }
+                  ],
+                  "fullname": "/Field/DISDETTA@contraente",
+                  "name": "DISDETTA@contraente"
+                },
+                {
+                  "ad": [
+                    {
+                      "name": "COUNT",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "ESYNCON",
+                      "scope": "CONTEXTUAL"
+                    },
+                    {
+                      "name": "SENTENCE_BEGIN",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "SENTENCE_END",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "TEXT",
+                      "type": "STRING",
+                      "scope": "DOCUMENT"
+                    }
+                  ],
+                  "fullname": "/Field/DISDETTA@dataScadenza",
+                  "name": "DISDETTA@dataScadenza"
+                },
+                {
+                  "ad": [
+                    {
+                      "name": "COUNT",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "SENTENCE_BEGIN",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "SENTENCE_END",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "TEXT",
+                      "type": "STRING",
+                      "scope": "DOCUMENT"
+                    }
+                  ],
+                  "fullname": "/Field/DISDETTA@numeroPolizza",
+                  "name": "DISDETTA@numeroPolizza"
+                },
+                {
+                  "ad": [
+                    {
+                      "name": "COUNT",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "ESYNCON",
+                      "scope": "CONTEXTUAL"
+                    },
+                    {
+                      "name": "SENTENCE_BEGIN",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "SENTENCE_END",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "TEXT",
+                      "type": "STRING",
+                      "scope": "DOCUMENT"
+                    }
+                  ],
+                  "fullname": "/Field/MAIL@dataMail",
+                  "name": "MAIL@dataMail"
+                },
+                {
+                  "ad": [
+                    {
+                      "name": "COUNT",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "ESYNCON",
+                      "scope": "CONTEXTUAL"
+                    },
+                    {
+                      "name": "SENTENCE_BEGIN",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "SENTENCE_END",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "TEXT",
+                      "type": "STRING",
+                      "scope": "DOCUMENT"
+                    }
+                  ],
+                  "fullname": "/Field/MAIL@mittente",
+                  "name": "MAIL@mittente"
+                },
+                {
+                  "ad": [
+                    {
+                      "name": "COUNT",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "SENTENCE_BEGIN",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "SENTENCE_END",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "TEXT",
+                      "type": "STRING",
+                      "scope": "DOCUMENT"
+                    }
+                  ],
+                  "fullname": "/Field/MAIL@oggetto",
+                  "name": "MAIL@oggetto"
+                },
+                {
+                  "ad": [
+                    {
+                      "name": "COUNT",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "SENTENCE_BEGIN",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "SENTENCE_END",
+                      "type": "INTEGER",
+                      "scope": "DOCUMENT"
+                    },
+                    {
+                      "name": "TEXT",
+                      "type": "STRING",
+                      "scope": "DOCUMENT"
+                    }
+                  ],
+                  "fullname": "/Field/MAIL@spettabile",
+                  "name": "MAIL@spettabile"
+                }
+              ],
+              "fullname": "/Field",
+              "name": "Field"
+            },
+            {
+              "type": [
+                {
+                  "ad": [
+                    {
+                      "name": "contraente",
+                      "type": "POINTER",
+                      "scope": "CONTEXTUAL",
+                      "constraint": "/Field/DISDETTA@contraente"
+                    },
+                    {
+                      "name": "dataScadenza",
+                      "type": "POINTER",
+                      "scope": "CONTEXTUAL",
+                      "constraint": "/Field/DISDETTA@dataScadenza"
+                    },
+                    {
+                      "name": "numeroPolizza",
+                      "type": "POINTER",
+                      "scope": "CONTEXTUAL",
+                      "constraint": "/Field/DISDETTA@numeroPolizza"
+                    }
+                  ],
+                  "fullname": "/Template/DISDETTA",
+                  "name": "DISDETTA"
+                },
+                {
+                  "ad": [
+                    {
+                      "name": "dataMail",
+                      "type": "POINTER",
+                      "scope": "CONTEXTUAL",
+                      "constraint": "/Field/MAIL@dataMail"
+                    },
+                    {
+                      "name": "mittente",
+                      "type": "POINTER",
+                      "scope": "CONTEXTUAL",
+                      "constraint": "/Field/MAIL@mittente"
+                    },
+                    {
+                      "name": "oggetto",
+                      "type": "POINTER",
+                      "scope": "CONTEXTUAL",
+                      "constraint": "/Field/MAIL@oggetto"
+                    },
+                    {
+                      "name": "spettabile",
+                      "type": "POINTER",
+                      "scope": "CONTEXTUAL",
+                      "constraint": "/Field/MAIL@spettabile"
+                    }
+                  ],
+                  "fullname": "/Template/MAIL",
+                  "name": "MAIL"
+                }
+              ],
+              "fullname": "/Template",
+              "name": "Template"
+            }
+          ],
+          "descriptor": [
+            {
+              "name": "0",
+              "label": "Marzia Parri",
+              "type": "/Template/DISDETTA",
+              "a": [
+                {
+                  "name": "contraente",
+                  "type": "POINTER",
+                  "refName": "Marzia Parri",
+                  "refType": "/Field/DISDETTA@contraente"
+                },
+                {
+                  "name": "prefLabel",
+                  "value": "Marzia Parri"
+                }
+              ]
+            },
+            {
+              "name": "Marzia Parri",
+              "type": "/Field/DISDETTA@contraente",
+              "a": [
+                {
+                  "name": "COUNT",
+                  "value": "1",
+                  "type": "INTEGER"
+                }
+              ]
+            },
+            {
+              "name": "1",
+              "label": "16-Gen-2020",
+              "type": "/Template/DISDETTA",
+              "a": [
+                {
+                  "name": "dataScadenza",
+                  "type": "POINTER",
+                  "refName": "16-Gen-2020",
+                  "refType": "/Field/DISDETTA@dataScadenza"
+                },
+                {
+                  "name": "prefLabel",
+                  "value": "16-Gen-2020"
+                }
+              ]
+            },
+            {
+              "name": "16-Gen-2020",
+              "type": "/Field/DISDETTA@dataScadenza",
+              "a": [
+                {
+                  "name": "COUNT",
+                  "value": "1",
+                  "type": "INTEGER"
+                }
+              ]
+            },
+            {
+              "name": "2",
+              "label": "2H/M12358626",
+              "type": "/Template/DISDETTA",
+              "a": [
+                {
+                  "name": "numeroPolizza",
+                  "type": "POINTER",
+                  "refName": "2H/M12358626",
+                  "refType": "/Field/DISDETTA@numeroPolizza"
+                },
+                {
+                  "name": "prefLabel",
+                  "value": "2H/M12358626"
+                }
+              ]
+            },
+            {
+              "name": "2H/M12358626",
+              "type": "/Field/DISDETTA@numeroPolizza",
+              "a": [
+                {
+                  "name": "COUNT",
+                  "value": "1",
+                  "type": "INTEGER"
+                }
+              ]
+            },
+            {
+              "name": "0",
+              "label": "9-Dic-2019",
+              "type": "/Template/MAIL",
+              "a": [
+                {
+                  "name": "dataMail",
+                  "type": "POINTER",
+                  "refName": "9-Dic-2019",
+                  "refType": "/Field/MAIL@dataMail"
+                },
+                {
+                  "name": "prefLabel",
+                  "value": "9-Dic-2019"
+                }
+              ]
+            },
+            {
+              "name": "9-Dic-2019",
+              "type": "/Field/MAIL@dataMail",
+              "a": [
+                {
+                  "name": "COUNT",
+                  "value": "1",
+                  "type": "INTEGER"
+                }
+              ]
+            },
+            {
+              "name": "1",
+              "label": "Marzia Parri",
+              "type": "/Template/MAIL",
+              "a": [
+                {
+                  "name": "mittente",
+                  "type": "POINTER",
+                  "refName": "Marzia Parri",
+                  "refType": "/Field/MAIL@mittente"
+                },
+                {
+                  "name": "prefLabel",
+                  "value": "Marzia Parri"
+                }
+              ]
+            },
+            {
+              "name": "Marzia Parri",
+              "type": "/Field/MAIL@mittente",
+              "a": [
+                {
+                  "name": "COUNT",
+                  "value": "3",
+                  "type": "INTEGER"
+                }
+              ]
+            },
+            {
+              "name": "2",
+              "label": "PARRI MARZIA",
+              "type": "/Template/MAIL",
+              "a": [
+                {
+                  "name": "mittente",
+                  "type": "POINTER",
+                  "refName": "PARRI MARZIA",
+                  "refType": "/Field/MAIL@mittente"
+                },
+                {
+                  "name": "prefLabel",
+                  "value": "PARRI MARZIA"
+                }
+              ]
+            },
+            {
+              "name": "PARRI MARZIA",
+              "type": "/Field/MAIL@mittente",
+              "a": [
+                {
+                  "name": "COUNT",
+                  "value": "1",
+                  "type": "INTEGER"
+                }
+              ]
+            },
+            {
+              "name": "3",
+              "label": "Oggetto: Disdetta",
+              "type": "/Template/MAIL",
+              "a": [
+                {
+                  "name": "oggetto",
+                  "type": "POINTER",
+                  "refName": "Oggetto: Disdetta",
+                  "refType": "/Field/MAIL@oggetto"
+                },
+                {
+                  "name": "prefLabel",
+                  "value": "Oggetto: Disdetta"
+                }
+              ]
+            },
+            {
+              "name": "Oggetto: Disdetta",
+              "type": "/Field/MAIL@oggetto",
+              "a": [
+                {
+                  "name": "COUNT",
+                  "value": "1",
+                  "type": "INTEGER"
+                }
+              ]
+            },
+            {
+              "name": "4",
+              "label": "Oggetto: Disdetta polizza assicurativa",
+              "type": "/Template/MAIL",
+              "a": [
+                {
+                  "name": "oggetto",
+                  "type": "POINTER",
+                  "refName": "Oggetto: Disdetta polizza assicurativa",
+                  "refType": "/Field/MAIL@oggetto"
+                },
+                {
+                  "name": "prefLabel",
+                  "value": "Oggetto: Disdetta polizza assicurativa"
+                }
+              ]
+            },
+            {
+              "name": "Oggetto: Disdetta polizza assicurativa",
+              "type": "/Field/MAIL@oggetto",
+              "a": [
+                {
+                  "name": "COUNT",
+                  "value": "1",
+                  "type": "INTEGER"
+                }
+              ]
+            },
+            {
+              "name": "5",
+              "label": "ITAS",
+              "type": "/Template/MAIL",
+              "a": [
+                {
+                  "name": "prefLabel",
+                  "value": "ITAS"
+                },
+                {
+                  "name": "spettabile",
+                  "type": "POINTER",
+                  "refName": "ITAS",
+                  "refType": "/Field/MAIL@spettabile"
+                }
+              ]
+            },
+            {
+              "name": "ITAS",
+              "type": "/Field/MAIL@spettabile",
+              "a": [
+                {
+                  "name": "COUNT",
+                  "value": "1",
+                  "type": "INTEGER"
+                }
+              ]
+            }
+          ],
+          "annotation": [
+            {
+              "a": [
+                {
+                  "name": "ESYNCON",
+                  "value": "100215627"
+                },
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "0",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "22",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "Parri Marzia",
+                  "type": "STRING"
+                }
+              ],
+              "name": "Marzia Parri",
+              "type": "/Field/MAIL@mittente",
+              "s": 10,
+              "e": 22
+            },
+            {
+              "a": [
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "71",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "91",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "ITAS",
+                  "type": "STRING"
+                }
+              ],
+              "name": "ITAS",
+              "type": "/Field/MAIL@spettabile",
+              "s": 81,
+              "e": 85
+            },
+            {
+              "a": [
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "150",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "188",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "Oggetto: Disdetta polizza assicurativa",
+                  "type": "STRING"
+                }
+              ],
+              "name": "Oggetto: Disdetta polizza assicurativa",
+              "type": "/Field/MAIL@oggetto",
+              "s": 150,
+              "e": 188
+            },
+            {
+              "a": [
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "150",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "188",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "Oggetto: Disdetta",
+                  "type": "STRING"
+                }
+              ],
+              "name": "Oggetto: Disdetta",
+              "type": "/Field/MAIL@oggetto",
+              "s": 150,
+              "e": 167
+            },
+            {
+              "a": [
+                {
+                  "name": "ESYNCON",
+                  "value": "100215627"
+                },
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "191",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "215",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "Parri Marzia",
+                  "type": "STRING"
+                }
+              ],
+              "name": "Marzia Parri",
+              "type": "/Field/DISDETTA@contraente",
+              "s": 203,
+              "e": 215
+            },
+            {
+              "a": [
+                {
+                  "name": "ESYNCON",
+                  "value": "100215627"
+                },
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "191",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "215",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "Parri Marzia",
+                  "type": "STRING"
+                }
+              ],
+              "name": "Marzia Parri",
+              "type": "/Field/MAIL@mittente",
+              "s": 203,
+              "e": 215
+            },
+            {
+              "a": [
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "217",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "245",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "2H/M12358626",
+                  "type": "STRING"
+                }
+              ],
+              "name": "2H/M12358626",
+              "type": "/Field/DISDETTA@numeroPolizza",
+              "s": 233,
+              "e": 245
+            },
+            {
+              "a": [
+                {
+                  "name": "ESYNCON",
+                  "value": "100205892"
+                },
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "283",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "411",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "16/01/2020",
+                  "type": "STRING"
+                }
+              ],
+              "name": "16-Gen-2020",
+              "type": "/Field/DISDETTA@dataScadenza",
+              "s": 400,
+              "e": 410
+            },
+            {
+              "a": [
+                {
+                  "name": "ESYNCON",
+                  "value": "100215627"
+                },
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "530",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "542",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "Parri Marzia",
+                  "type": "STRING"
+                }
+              ],
+              "name": "Marzia Parri",
+              "type": "/Field/MAIL@mittente",
+              "s": 530,
+              "e": 542
+            },
+            {
+              "a": [
+                {
+                  "name": "ESYNCON",
+                  "value": "100205892"
+                },
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "547",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "562",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "9.12.19",
+                  "type": "STRING"
+                }
+              ],
+              "name": "9-Dic-2019",
+              "type": "/Field/MAIL@dataMail",
+              "s": 555,
+              "e": 562
+            },
+            {
+              "a": [
+                {
+                  "name": "SENTENCE_BEGIN",
+                  "value": "711",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "SENTENCE_END",
+                  "value": "728",
+                  "type": "INTEGER"
+                },
+                {
+                  "name": "TEXT",
+                  "value": "PARRI MARZIA",
+                  "type": "STRING"
+                }
+              ],
+              "name": "PARRI MARZIA",
+              "type": "/Field/MAIL@mittente",
+              "s": 716,
+              "e": 728
+            },
+            {
+              "a": [
+                {
+                  "name": "contraente",
+                  "type": "POINTER",
+                  "refName": "Marzia Parri",
+                  "refType": "/Field/DISDETTA@contraente",
+                  "s": 203,
+                  "e": 215
+                }
+              ],
+              "name": "0",
+              "label": "Marzia Parri",
+              "type": "/Template/DISDETTA"
+            },
+            {
+              "a": [
+                {
+                  "name": "dataScadenza",
+                  "type": "POINTER",
+                  "refName": "16-Gen-2020",
+                  "refType": "/Field/DISDETTA@dataScadenza",
+                  "s": 400,
+                  "e": 410
+                }
+              ],
+              "name": "1",
+              "label": "16-Gen-2020",
+              "type": "/Template/DISDETTA"
+            },
+            {
+              "a": [
+                {
+                  "name": "numeroPolizza",
+                  "type": "POINTER",
+                  "refName": "2H/M12358626",
+                  "refType": "/Field/DISDETTA@numeroPolizza",
+                  "s": 233,
+                  "e": 245
+                }
+              ],
+              "name": "2",
+              "label": "2H/M12358626",
+              "type": "/Template/DISDETTA"
+            },
+            {
+              "a": [
+                {
+                  "name": "dataMail",
+                  "type": "POINTER",
+                  "refName": "9-Dic-2019",
+                  "refType": "/Field/MAIL@dataMail",
+                  "s": 555,
+                  "e": 562
+                }
+              ],
+              "name": "0",
+              "label": "9-Dic-2019",
+              "type": "/Template/MAIL"
+            },
+            {
+              "a": [
+                {
+                  "name": "mittente",
+                  "type": "POINTER",
+                  "refName": "Marzia Parri",
+                  "refType": "/Field/MAIL@mittente",
+                  "s": 10,
+                  "e": 22
+                },
+                {
+                  "name": "mittente",
+                  "type": "POINTER",
+                  "refName": "Marzia Parri",
+                  "refType": "/Field/MAIL@mittente",
+                  "s": 203,
+                  "e": 215
+                },
+                {
+                  "name": "mittente",
+                  "type": "POINTER",
+                  "refName": "Marzia Parri",
+                  "refType": "/Field/MAIL@mittente",
+                  "s": 530,
+                  "e": 542
+                }
+              ],
+              "name": "1",
+              "label": "Marzia Parri",
+              "type": "/Template/MAIL"
+            },
+            {
+              "a": [
+                {
+                  "name": "mittente",
+                  "type": "POINTER",
+                  "refName": "PARRI MARZIA",
+                  "refType": "/Field/MAIL@mittente",
+                  "s": 716,
+                  "e": 728
+                }
+              ],
+              "name": "2",
+              "label": "PARRI MARZIA",
+              "type": "/Template/MAIL"
+            },
+            {
+              "a": [
+                {
+                  "name": "oggetto",
+                  "type": "POINTER",
+                  "refName": "Oggetto: Disdetta",
+                  "refType": "/Field/MAIL@oggetto",
+                  "s": 150,
+                  "e": 167
+                }
+              ],
+              "name": "3",
+              "label": "Oggetto: Disdetta",
+              "type": "/Template/MAIL"
+            },
+            {
+              "a": [
+                {
+                  "name": "oggetto",
+                  "type": "POINTER",
+                  "refName": "Oggetto: Disdetta polizza assicurativa",
+                  "refType": "/Field/MAIL@oggetto",
+                  "s": 150,
+                  "e": 188
+                }
+              ],
+              "name": "4",
+              "label": "Oggetto: Disdetta polizza assicurativa",
+              "type": "/Template/MAIL"
+            },
+            {
+              "a": [
+                {
+                  "name": "spettabile",
+                  "type": "POINTER",
+                  "refName": "ITAS",
+                  "refType": "/Field/MAIL@spettabile",
+                  "s": 81,
+                  "e": 85
+                }
+              ],
+              "name": "5",
+              "label": "ITAS",
+              "type": "/Template/MAIL"
+            }
+          ],
+          "name": "EXTRACTION"
+        },
+        {
+          "type": [
+            {
+              "ad": [
+                {
+                  "name": "SCORE",
+                  "type": "FLOAT",
+                  "scope": "DOCUMENT"
+                }
+              ],
+              "fullname": "/Domain",
+              "name": "Domain"
+            },
+            {
+              "type": [
+                {
+                  "fullname": "/Entity/KNOWN CONCEPTS",
+                  "name": "KNOWN CONCEPTS"
+                },
+                {
+                  "fullname": "/Entity/ORGANIZATIONS",
+                  "name": "ORGANIZATIONS"
+                },
+                {
+                  "ad": [
+                    {
+                      "name": "ALIAS",
+                      "scope": "CONTEXTUAL"
+                    },
+                    {
+                      "name": "NAME",
+                      "scope": "CONTEXTUAL"
+                    },
+                    {
+                      "name": "SEX",
+                      "scope": "CONTEXTUAL"
+                    },
+                    {
+                      "name": "SURNAME",
+                      "scope": "CONTEXTUAL"
+                    }
+                  ],
+                  "fullname": "/Entity/PEOPLE",
+                  "name": "PEOPLE"
+                },
+                {
+                  "ad": [
+                    {
+                      "name": "ALIAS",
+                      "scope": "CONTEXTUAL"
+                    },
+                    {
+                      "name": "GEOREF",
+                      "scope": "CONTEXTUAL"
+                    },
+                    {
+                      "name": "SYNCON",
+                      "scope": "CONTEXTUAL"
+                    }
+                  ],
+                  "fullname": "/Entity/PLACES",
+                  "name": "PLACES"
+                }
+              ],
+              "fullname": "/Entity",
+              "name": "Entity"
+            }
+          ],
+          "descriptor": [
+            {
+              "name": "Marzia Parri",
+              "type": "/Entity/PEOPLE",
+              "a": [
+                {
+                  "name": "ALIAS",
+                  "value": "Parri Marzia"
+                },
+                {
+                  "name": "NAME",
+                  "value": "Marzia"
+                },
+                {
+                  "name": "SEX",
+                  "value": "F"
+                },
+                {
+                  "name": "SURNAME",
+                  "value": "Parri"
+                }
+              ]
+            },
+            {
+              "name": "Cecina",
+              "type": "/Entity/PLACES",
+              "a": [
+                {
+                  "name": "GEOREF",
+                  "value": "provincia di Livorno/Toscana/Italia/Europa"
+                },
+                {
+                  "name": "SYNCON",
+                  "value": "16505545"
+                }
+              ]
+            },
+            {
+              "name": "comune di Trento",
+              "type": "/Entity/PLACES",
+              "a": [
+                {
+                  "name": "ALIAS",
+                  "value": "TN"
+                },
+                {
+                  "name": "ALIAS",
+                  "value": "TRENTO"
+                },
+                {
+                  "name": "GEOREF",
+                  "value": "provincia di Trento/Trentino Alto Adige/Italia/Europa"
+                },
+                {
+                  "name": "SYNCON",
+                  "value": "16507278"
+                }
+              ]
+            },
+            {
+              "name": "law",
+              "type": "/Domain",
+              "a": [
+                {
+                  "name": "SCORE",
+                  "value": "6.1",
+                  "type": "FLOAT"
+                }
+              ]
+            },
+            {
+              "name": "business and commercial law",
+              "type": "/Domain",
+              "a": [
+                {
+                  "name": "SCORE",
+                  "value": "1.2",
+                  "type": "FLOAT"
+                }
+              ]
+            }
+          ],
+          "annotation": [
+            {
+              "name": "Marzia Parri",
+              "type": "/Entity/PEOPLE",
+              "s": 10,
+              "e": 22
+            },
+            {
+              "name": "comune di Trento",
+              "type": "/Entity/PLACES",
+              "s": 132,
+              "e": 138
+            },
+            {
+              "name": "comune di Trento",
+              "type": "/Entity/PLACES",
+              "s": 140,
+              "e": 142
+            },
+            {
+              "name": "Marzia Parri",
+              "type": "/Entity/PEOPLE",
+              "s": 203,
+              "e": 215
+            },
+            {
+              "name": "Marzia Parri",
+              "type": "/Entity/PEOPLE",
+              "s": 530,
+              "e": 542
+            },
+            {
+              "name": "Cecina",
+              "type": "/Entity/PLACES",
+              "s": 547,
+              "e": 553
+            }
+          ],
+          "name": "SYNTHESIS"
+        }
+      ],
+      "status": {
+        "valid": true
+      },
+      "id": "conv-d98839c3-9c05-4721-9f26-875b6966d7e9"
+    }
+  ]
+}

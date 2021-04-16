@@ -1,47 +1,29 @@
-<!--<p-toolbar class="layout-topbar">
-  <div class="p-toolbar-group-left">
-    <p-button icon="pi pi-bars" (click)="toggleSideBar()"></p-button>
-  </div>
-
-  <div class="p-toolbar-group-right">
-    <p-button icon="pi pi-search"></p-button>
-    <p-button icon="pi pi-calendar" styleClass="p-button-success"></p-button>
-    <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button>
-  </div>
-</p-toolbar>
--->
 <div class="layout-topbar">
-  <div class="layout-topbar-wrapper">
-    <div class="layout-topbar-left">
-      <div
-        id="logolink"
-        class="layout-topbar-logo"
-        style="cursor: pointer; outline: none"
-        tabindex="0"
-      >
-        <img
-          id="app-logo"
-          alt="fincons-layout"
-          src="https://www.finconsgroup.com/imgpub/1934254/0/0/logo-fincons-web.png"
-        />
-      </div>
+    <div class="layout-topbar-wrapper">
+        <div class="layout-topbar-left">
+            <div>Disdetta Polizza</div>
+        </div>
+        <div class="layout-topbar-right">
+            <span></span>
+            <div id="logolink" class="layout-topbar-logo" style="cursor: pointer; outline: none" tabindex="0">
+                <img
+                    id="app-logo-expert"
+                    alt="expert-layout"
+                    src="https://www.expert.ai/wp-content/uploads/2020/09/logo-new.png"
+                />
+                <img
+                    id="app-logo"
+                    alt="fincons-layout"
+                    src="https://www.finconsgroup.com/imgpub/1934254/0/0/logo-fincons-web.png"
+                />
+            </div>
+        </div>
     </div>
-    <div class="layout-topbar-right">
-      <a class="menu-button" (click)="toggleSideBar()"
-        ><i class="pi pi-bars"></i
-      ></a>
-      <a href="#" class="layout-rightpanel-button"
-        ><i class="pi pi-arrow-left"></i
-      ></a>
-    </div>
-  </div>
-</div>
 
-<section class="container">
-  <aside [ngClass]="{ expanding: isExpanding }">
-    <p-menu [model]="menuItems" styleClass="side-menu"></p-menu>
-  </aside>
-  <div class="main-body">
-    <router-outlet></router-outlet>
-  </div>
-</section>
+    <div
+        class="main-body"
+        style="overflow-y: auto; height: 93vh; width: 100vw; padding: 15px; background-color: #b10022"
+    >
+        <app-disdetta-polizza></app-disdetta-polizza>
+    </div>
+</div>
