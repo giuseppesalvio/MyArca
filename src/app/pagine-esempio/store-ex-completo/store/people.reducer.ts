@@ -1,4 +1,4 @@
-import { Action, createReducer, on } from "@ngrx/store";
+import { createReducer, on } from "@ngrx/store";
 
 import { People } from "../../../models/people";
 import { loadPeoples, loadPeoplesSuccess } from "./people.actions";
@@ -23,7 +23,6 @@ export const initialState: PeopleState = {
 export const peopleReducer = createReducer(
   initialState,
   on(loadPeoples, (state: PeopleState) => {
-    debugger
     return {
       ...state,
       peoples: [...state.peoples],

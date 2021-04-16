@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { PeopleService } from "../../../services/people.service";
 import { catchError, map, mergeMap } from "rxjs/operators";
-import { EMPTY, of } from "rxjs";
 import {
   loadPeoples,
   loadPeoplesFailure,
@@ -17,7 +16,6 @@ export class PeopleEffects {
   ) {}
 
   loadPeoples$ = createEffect(() => {
-    debugger;
     return this.actions$.pipe(
       ofType(loadPeoples.type),
       mergeMap(() =>
@@ -26,8 +24,7 @@ export class PeopleEffects {
             type: loadPeoplesSuccess.type,
             peoples: peoples,
           })),
-          // catchError(() => EMPTY)
-          catchError((error) => ofType(loadPeoplesFailure.type))
+          catchError(() => ofType(loadPeoplesFailure.type))
         )
       )
     );
