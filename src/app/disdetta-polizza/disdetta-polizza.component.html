@@ -48,21 +48,19 @@
             <div class="p-grid">
                 <div class="p-col-12" style="overflow-y: auto; height: 50vh">
                     <p-accordion [multiple]="true">
-                        <p-accordionTab header="Entities">
+                        <p-accordionTab header="Entities" [selected]="openTab">
                             <div *ngFor="let campo of cogitoTemplate">
                                 {{ campo.name }}
                             </div>
                         </p-accordionTab>
 
-                        <p-accordionTab header="Entity Fields">
+                        <p-accordionTab header="Entity Fields" [selected]="openTab">
                             <div *ngFor="let temp of cogitoField">
                                 {{ temp.name }}
                             </div>
                         </p-accordionTab>
 
-
-
-                        <p-accordionTab header="Descriptor">
+                        <p-accordionTab header="Descriptor" [selected]="openTab">
                             <div *ngFor="let campo of cogitoDescription">
                                 <span *ngIf="!campo.label"> {{ campo.type }} - {{ campo.name }} </span>
                             </div>
@@ -76,19 +74,19 @@
                             </div>
                         </p-accordionTab>
 
-<!--                        <p-accordionTab header="Annotation">-->
-<!--                            <div *ngFor="let campo of cogitoAnnotation">-->
-<!--                                <span *ngIf="!campo.label"> {{ campo.type }} - {{ campo.name }} </span>-->
-<!--                            </div>-->
-<!--                            <hr />-->
-<!--                            <div *ngFor="let campo of cogitoAnnotation">-->
-<!--                                <span *ngIf="campo.label">-->
-<!--                                    {{ campo.type }} - {{ campo.name }} - {{ campo.label }}-->
-<!--                                </span>-->
-<!--                            </div>-->
-<!--                        </p-accordionTab>-->
+                        <!--                        <p-accordionTab header="Annotation">-->
+                        <!--                            <div *ngFor="let campo of cogitoAnnotation">-->
+                        <!--                                <span *ngIf="!campo.label"> {{ campo.type }} - {{ campo.name }} </span>-->
+                        <!--                            </div>-->
+                        <!--                            <hr />-->
+                        <!--                            <div *ngFor="let campo of cogitoAnnotation">-->
+                        <!--                                <span *ngIf="campo.label">-->
+                        <!--                                    {{ campo.type }} - {{ campo.name }} - {{ campo.label }}-->
+                        <!--                                </span>-->
+                        <!--                            </div>-->
+                        <!--                        </p-accordionTab>-->
 
-                        <p-accordionTab header="Synthesis">
+                        <p-accordionTab header="Synthesis" [selected]="openTab">
                             <div *ngFor="let synthesis of cogitoSynthesis">
                                 <div *ngFor="let campo of synthesis.a">
                                     <span>{{ campo.name }} - {{ campo.value }}</span>
@@ -96,35 +94,55 @@
                             </div>
                         </p-accordionTab>
 
-                        <p-accordionTab header="Input for RPA">
-                             <pre [innerHTML]="inputRpa"></pre>
+                        <p-accordionTab header="Input for RPA" [selected]="openTab">
+                            <pre [innerHTML]="inputRpa"></pre>
                         </p-accordionTab>
 
-                        <p-accordionTab header="Customer Mail [Cancellation]">
+                        <p-accordionTab
+                            *ngIf="this.toogleCancellation && this.openTab"
+                            header="Customer Mail [Cancellation]"
+                            [selected]="openTab"
+                        >
                             <pre [innerHTML]="customerMailCancellation"></pre>
                         </p-accordionTab>
-                        <p-accordionTab header="Management Mail [Cancellation]">
-                             <pre [innerHTML]="operationMailCancellation"></pre>
+                        <p-accordionTab
+                            *ngIf="this.toogleCancellation && this.openTab"
+                            header="Management Mail [Cancellation]"
+                            [selected]="openTab"
+                        >
+                            <pre [innerHTML]="operationMailCancellation"></pre>
                         </p-accordionTab>
 
-                        <p-accordionTab header="Customer Mail [Missing mandatory fields]">
-                             <pre [innerHTML]="customerMailMissing"></pre>
+                        <p-accordionTab
+                            *ngIf="this.toogleMissingMandatory && this.openTab"
+                            header="Customer Mail [Missing mandatory fields]"
+                            [selected]="openTab"
+                        >
+                            <pre [innerHTML]="customerMailMissing"></pre>
                         </p-accordionTab>
-                        <p-accordionTab header="Management Mail [Missing mandatory fields]">
-                             <pre [innerHTML]="operationMailMissing"></pre>
+                        <p-accordionTab
+                            *ngIf="this.toogleMissingMandatory && this.openTab"
+                            header="Management Mail [Missing mandatory fields]"
+                            [selected]="openTab"
+                        >
+                            <pre [innerHTML]="operationMailMissing"></pre>
                         </p-accordionTab>
 
-                        <p-accordionTab header="Customer Mail [Wrong Company]">
+                        <p-accordionTab
+                            *ngIf="this.toogleWrongCompany && this.openTab"
+                            header="Customer Mail [Wrong Company]"
+                            [selected]="openTab"
+                        >
                             <pre [innerHTML]="customerMailWrongAgency"></pre>
                         </p-accordionTab>
-                        <p-accordionTab header="Management Mail [Wrong Company]">
-                             <pre [innerHTML]="operationMailWrongAgency"></pre>
+                        <p-accordionTab
+                            *ngIf="this.toogleWrongCompany && this.openTab"
+                            header="Management Mail [Wrong Company]"
+                            [selected]="openTab"
+                        >
+                            <pre [innerHTML]="operationMailWrongAgency"></pre>
                         </p-accordionTab>
-
-
-
                     </p-accordion>
-
                 </div>
             </div>
         </p-card>

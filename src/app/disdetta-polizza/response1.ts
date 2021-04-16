@@ -4591,7 +4591,7 @@ export const mailCustomerCancellation =
     'Dear customer <b>$customer</b>,\n' +
     'We regret your policy cancellation request. \n' +
     'We inform you that the cancellation process is complete, and that it will take effect from this date <b>$cancellationDate</b> for the policy <b>$policy</b>. \n' +
-    'For any problem we remain at your disposal. \n'+
+    'For any problem we remain at your disposal. \n' +
     '\n' +
     'Greetings, \n' +
     '<b>$company</b>\n'
@@ -4599,20 +4599,16 @@ export const mailCustomerCancellation =
 export const mailOperationCancellation =
     'Hello,\n' +
     'we have received a cancellation request for the policy <b>$policy</b> from our policyholder <b>$customer</b> dated <b>$requestDate</b>.\n' +
-    'The automated process has successfully completed the transaction with cancellation date <b>$cancellationDate</b> \n'+
+    'The automated process has successfully completed the transaction with cancellation date <b>$cancellationDate</b> \n' +
     '\n' +
     'Greetings,\n' +
     'Finco bot.'
 
-
-
-
-
 export const mailCustomerMissing =
     'Dear customer <b>$customer</b>,\n' +
-    'we are sorry, but your request is missing important information, such as the policy number you want to cancel.\n'+
-    'We kindly ask you to indicate which policy you want to cancel.\n'+
-    'We will process the cancellation request as soon as possible'+
+    'we are sorry, but your request is missing important information, such as the policy number you want to cancel.\n' +
+    'We kindly ask you to indicate which policy you want to cancel.\n' +
+    'We will process the cancellation request as soon as possible\n' +
     '\n' +
     'Greetings, \n' +
     '<b>$company</b>\n'
@@ -4620,20 +4616,15 @@ export const mailCustomerMissing =
 export const mailOperationMissing =
     'Hello,\n' +
     'the customer <b>$customer</b> has requested the cancellation of the policy, without indicating which one it is\n' +
-    'In our information systems we have found more policies associated with the contractor so we have requested confirmation of the policy number to be canceled.\n'+
+    'In our information systems we have found more policies associated with the contractor so we have requested confirmation of the policy number to be canceled.\n' +
     '\n' +
     'Greetings,\n' +
     'Finco bot.'
 
-
-
-
-
-
 export const mailCustomerWrongAgency =
     'Dear customer <b>$customer</b>,\n' +
     'there is no active policy with you in our systems..\n' +
-    'We are sorry but we are unable to process your request.\n'+
+    'We are sorry but we are unable to process your request.\n' +
     '\n' +
     'Greetings, \n' +
     '<b>$company</b>\n'
@@ -4641,7 +4632,7 @@ export const mailCustomerWrongAgency =
 export const mailOperationWrongAgency =
     'Hello,\n' +
     'customer <b>$customer</b> has requested a cancellation, but there is no active policy associated with that registry.\n' +
-    'We have therefore informed the customer that we are unable to process the request.\n'+
+    'We have therefore informed the customer that we are unable to process the request.\n' +
     '\n' +
     'Greetings,\n' +
     'Finco bot.'

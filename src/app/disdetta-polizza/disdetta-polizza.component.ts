@@ -7,8 +7,12 @@ import {
     COGITO_RESPONSE_ENG_1,
     COGITO_RESPONSE_ENG_2,
     COGITO_RESPONSE_ENG_3,
-    mailCustomerCancellation, mailCustomerMissing, mailCustomerWrongAgency,
-    mailOperationCancellation, mailOperationMissing, mailOperationWrongAgency,
+    mailCustomerCancellation,
+    mailCustomerMissing,
+    mailCustomerWrongAgency,
+    mailOperationCancellation,
+    mailOperationMissing,
+    mailOperationWrongAgency,
 } from './response1'
 import * as _ from 'underscore'
 
@@ -24,7 +28,7 @@ export class DisdettaPolizzaComponent implements OnInit {
     uploadedFiles: any[] = []
     fileContent: string | ArrayBuffer = 'Please load a file'
     fileUploaded: File
-
+    openTab = false
     cogitoResponse1 = COGITO_RESPONSE1
     cogitoResponseEng1 = COGITO_RESPONSE_ENG_1
     cogitoResponseEng2 = COGITO_RESPONSE_ENG_2
@@ -44,7 +48,6 @@ export class DisdettaPolizzaComponent implements OnInit {
     customerMailWrongAgency
     operationMailWrongAgency
 
-
     inputRpa
     response: CogitoResponse
     cogitoDescription
@@ -58,8 +61,12 @@ export class DisdettaPolizzaComponent implements OnInit {
     mailDate
     policy
     company
+    toogleMissingMandatory = false
+    toogleWrongCompany = false
+    toogleCancellation = true
 
     sendEnable = false
+
     constructor(private messageService: MessageService, private disdettaPolizzaService: DisdettaPolizzaService) {}
 
     ngOnInit(): void {}
@@ -100,6 +107,7 @@ export class DisdettaPolizzaComponent implements OnInit {
         this.fileUploaded = file
 
         this.sendEnable = true
+        this.reset()
     }
 
     public postFile() {
@@ -146,12 +154,28 @@ export class DisdettaPolizzaComponent implements OnInit {
     }
 
     public mappingCustomerMail() {
-        this.contractor = this.getContractor().name
-        this.expDate = this.getExpirationDate().name
-        this.mailDate = this.getMailDate().name
-        this.policy = this.getPolicy().name
-        this.company = this.getCompany()
-        debugger
+        if (typeof this.getContractor() !== 'undefined') {
+            this.contractor = this.getContractor().name
+        }
+        if (typeof this.getExpirationDate() !== 'undefined') {
+            this.expDate = this.getExpirationDate().name
+        }
+        if (typeof this.getMailDate() !== 'undefined') {
+            this.mailDate = this.getMailDate().name
+        }
+        if (typeof this.getPolicy() !== 'undefined') {
+            this.policy = this.getPolicy().name
+            this.toogleWrongCompany = this.policy === '2H/M12345678'
+            this.toogleMissingMandatory = false
+        } else {
+            this.toogleWrongCompany = false
+            this.toogleMissingMandatory = !this.toogleWrongCompany && this.isEmpty(this.policy)
+        }
+        this.toogleCancellation = !this.toogleWrongCompany && !this.toogleMissingMandatory
+        if (typeof this.getCompany() !== 'undefined') {
+            this.company = this.getCompany()
+        }
+
         this.customerMailCancellation = this.templateCustomerMailCancellation
             .replace('$customer', this.contractor)
             .replace('$requestDate', this.mailDate)
@@ -166,8 +190,6 @@ export class DisdettaPolizzaComponent implements OnInit {
             .replace('$cancellationDate', this.add5Days(this.mailDate).toString())
             .replace('$expirationDate', this.expDate)
             .replace('$policy', this.policy)
-
-
 
         this.customerMailMissing = this.templateCustomerMailMissing
             .replace('$customer', this.contractor)
@@ -184,8 +206,6 @@ export class DisdettaPolizzaComponent implements OnInit {
             .replace('$expirationDate', this.expDate)
             .replace('$policy', this.policy)
 
-
-
         this.customerMailWrongAgency = this.templateCustomerMailWrongAgency
             .replace('$customer', this.contractor)
             .replace('$requestDate', this.mailDate)
@@ -201,34 +221,51 @@ export class DisdettaPolizzaComponent implements OnInit {
             .replace('$expirationDate', this.expDate)
             .replace('$policy', this.policy)
 
-        this.inputRpa = "Policy : "+ this.policy+ " \n"+
-            "Customer : " + this.contractor + " \n" +
-            "Cancellation date : " + this.mailDate;
+        this.inputRpa =
+            'Policy : ' +
+            this.policy +
+            ' \n' +
+            'Customer : ' +
+            this.contractor +
+            ' \n' +
+            'Cancellation date : ' +
+            this.mailDate
+
+        this.openTab = true
+    }
+
+    public isEmpty(str) {
+        return !str || str.length === 0 || /^\s*$/.test(str)
     }
 
     public add5Days(theDate: string) {
-        return new Date(Date.parse(theDate) + 5*24*60*60*1000);
+        return new Date(Date.parse(theDate) + 5 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US')
     }
+
     public senderCustomerMail() {
         return _.find(this.cogitoAnnotation, function (temp) {
             return temp.type.includes('CANCELLATION@contractor')
         })
     }
+
     public toCustomerMail() {
         return _.find(this.cogitoAnnotation, function (temp) {
             return temp.type.includes('CANCELLATION@contractor')
         })
     }
+
     public ccCustomerMail() {
         return _.find(this.cogitoAnnotation, function (temp) {
             return temp.type.includes('CANCELLATION@contractor')
         })
     }
+
     public subjectCustomerMail() {
         return _.find(this.cogitoAnnotation, function (temp) {
             return temp.type.includes('CANCELLATION@contractor')
         })
     }
+
     public getContractor() {
         return _.find(this.cogitoAnnotation, function (temp) {
             return temp.type.includes('CANCELLATION@contractor')
@@ -261,5 +298,30 @@ export class DisdettaPolizzaComponent implements OnInit {
             }
         })
         return company
+    }
+
+    private reset() {
+        this.openTab = false
+
+        this.customerMailCancellation = null
+
+        this.operationMailCancellation = null
+        this.customerMailMissing = null
+        this.operationMailMissing = null
+        this.customerMailWrongAgency = null
+        this.operationMailWrongAgency = null
+        this.inputRpa = null
+
+        this.cogitoField = null
+        this.cogitoTemplate = null
+        this.cogitoDescription = null
+        this.cogitoAnnotation = null
+        this.cogitoSynthesis = null
+
+        this.contractor = undefined
+        this.expDate = undefined
+        this.mailDate = undefined
+        this.policy = undefined
+        this.company = undefined
     }
 }
