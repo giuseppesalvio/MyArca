@@ -107,7 +107,7 @@
                         </p-accordionTab>
                         <p-accordionTab
                             *ngIf="this.toogleCancellation && this.openTab"
-                            header="Management Mail [Cancellation]"
+                            header="Internal Mail [Cancellation]"
                             [selected]="openTab"
                         >
                             <pre [innerHTML]="operationMailCancellation"></pre>
@@ -122,7 +122,7 @@
                         </p-accordionTab>
                         <p-accordionTab
                             *ngIf="this.toogleMissingMandatory && this.openTab"
-                            header="Management Mail [Missing mandatory fields]"
+                            header="Internal Mail [Missing mandatory fields]"
                             [selected]="openTab"
                         >
                             <pre [innerHTML]="operationMailMissing"></pre>
@@ -137,7 +137,7 @@
                         </p-accordionTab>
                         <p-accordionTab
                             *ngIf="this.toogleWrongCompany && this.openTab"
-                            header="Management Mail [Wrong Company]"
+                            header="Internal Mail [Wrong Company]"
                             [selected]="openTab"
                         >
                             <pre [innerHTML]="operationMailWrongAgency"></pre>
