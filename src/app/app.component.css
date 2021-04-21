@@ -90,7 +90,7 @@
 
 .layout-topbar .layout-topbar-wrapper .layout-topbar-left {
     height: 100%;
-    width: 240px;
+    width: 400px;
     padding: 11px 14px 13px;
     display: -ms-flexbox;
     display: flex;
@@ -117,4 +117,36 @@
 
 .layout-topbar-logo img {
     height: 100%;
+}
+
+:host ::ng-deep .p-button {
+    height: 100px;
+    width: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background: #b10022;
+    border: 1px solid #8c021d;
+}
+
+:host ::ng-deep .p-button:enabled:hover {
+    background: #7c041a;
+    color: #ffffff;
+    border-color: #7c041a;
+}
+
+:host ::ng-deep .p-button:enabled:active {
+    background: #7c041a;
+    color: #ffffff;
+    border-color: #7c041a;
+}
+
+:host ::ng-deep .p-button:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #c56275;
+}
+
+:host ::ng-deep .p-button.p-button-secondary:enabled:focus {
+    box-shadow: 0 0 0 0.2rem #c56275;
 }

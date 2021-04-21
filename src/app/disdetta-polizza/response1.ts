@@ -4602,7 +4602,7 @@ export const mailOperationCancellation =
     'The automated process has successfully completed the transaction with cancellation date <b>$cancellationDate</b> \n' +
     '\n' +
     'Greetings,\n' +
-    'Finco bot.'
+    'P&C Team.'
 
 export const mailCustomerMissing =
     'Dear customer <b>$customer</b>,\n' +
@@ -4619,7 +4619,7 @@ export const mailOperationMissing =
     'In our information systems we have found more policies associated with the contractor so we have requested confirmation of the policy number to be canceled.\n' +
     '\n' +
     'Greetings,\n' +
-    'Finco bot.'
+    'P&C Team.'
 
 export const mailCustomerWrongAgency =
     'Dear customer <b>$customer</b>,\n' +
@@ -4635,4 +4635,4 @@ export const mailOperationWrongAgency =
     'We have therefore informed the customer that we are unable to process the request.\n' +
     '\n' +
     'Greetings,\n' +
-    'Finco bot.'
+    'P&C Team.'
